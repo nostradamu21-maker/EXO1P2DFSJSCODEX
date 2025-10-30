@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Country details</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
+</head>
+<body>
+  <div>
+    <div>
+      <div class="center">
+        <div id="country-title"></div>
+      </div>
+      <div class="split">
+        <div>
+          <p>Number of entries</p>
+          <p id="totalEntries">0</p>
+        </div>
+        <div>
+          <p>Total Number of medals</p>
+          <p id="totalMedals">0</p>
+        </div>
+        <div>
+          <p>Total Number of athletes</p>
+          <p id="totalAthletes">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="chart-container wrapper-container">
+      <div class="container">
+        <canvas id="countryChart"></canvas>
+        <h2>Date</h2>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <a href="/">Go back</a>
+  </div>
+  <div class="center">
+    <span id="country-error"></span>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

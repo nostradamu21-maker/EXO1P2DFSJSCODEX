@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Olympic games app</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
+</head>
+<body>
+  <h2>Olympic games app</h2>
+  <hr/>
+  <div>
+    <div>
+      <div class="center">
+        <div id="home-title">Medals per Country</div>
+      </div>
+      <div class="split">
+        <div>
+          <p>Number of countries</p>
+          <p id="totalCountries">0</p>
+        </div>
+        <div>
+          <p>Number of JOs</p>
+          <p id="totalJOs">0</p>
+        </div>
+      </div>
+    </div>
+    <canvas id="DashboardPieChart"></canvas>
+  </div>
+  <div class="center">
+    <span id="home-error"></span>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

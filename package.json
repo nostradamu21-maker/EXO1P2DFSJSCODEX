@@ -1,0 +1,14 @@
+{
+  "name": "testp2codex-js",
+  "version": "1.0.0",
+  "description": "Messy Olympic stats app ported to a Node.js + vanilla JS stack for refactoring practice.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.2",
+    "express": "^4.19.2"
+  }
+}
