@@ -1,6 +1,5 @@
-# OlympicGamesStarter (JavaScript)
+# OlympicGamesStarter 
 
-Ce projet est la déclinaison JavaScript/Node.js du starter Angular fourni dans le dépôt `TESTP2CODEX`. Il a été volontairement laissé dans un état peu maintenable pour vous permettre d’analyser l’architecture existante, d’identifier les mauvaises pratiques et de proposer un refactoring complet.
 
 ## Installation
 
