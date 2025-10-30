@@ -1,5 +1,6 @@
-# OlympicGamesStarter 
+# OlympicGamesStarter
 
+Bienvenue ! Cette application a été volontairement laissée dans un état peu maintenable afin que vous puissiez analyser son architecture, repérer les mauvaises pratiques et proposer un refactoring complet.
 
 ## Installation
 
@@ -18,17 +19,17 @@ Le serveur Express démarre sur [http://localhost:3000](http://localhost:3000). 
 - les fichiers statiques contenus dans `public/` ;
 - l’API `GET /api/olympic` qui renvoie le contenu de `public/assets/mock/olympic.json`.
 
-L’application est fournie telle quelle : chaque modification des fichiers JavaScript ou HTML nécessite un rafraîchissement manuel dans le navigateur.
+Chaque modification des fichiers JavaScript ou HTML nécessite un rafraîchissement manuel dans le navigateur.
 
 ## Où commencer ?
 
-Comme pour la version Angular, une structure existe déjà même si elle n’est pas idéale. Prenez le temps d’explorer les fichiers suivants :
+Une structure existe déjà, même si elle n’est pas idéale. Prenez le temps d’explorer les fichiers suivants :
 
 - `public/app.js` (tout le code front-y est regroupé) ;
 - `server.js` (lecture synchrone du JSON, exposition de `node_modules/`) ;
 - `public/index.html` et `public/country.html` (duplication et accès DOM via des `id`).
 
-L’objectif du projet est de :
+## Votre mission
 
 1. Cartographier les mauvaises pratiques (architecture, logique, dette technique) et les noter dans `notes-architecture.md`.
 2. Proposer une organisation plus claire (modules, services, composants, gestion des données).
