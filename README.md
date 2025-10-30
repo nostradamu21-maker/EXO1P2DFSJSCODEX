@@ -1,21 +1,42 @@
-# TESTP2CODEX-JS
+# OlympicGamesStarter (JavaScript)
 
-Ce projet reproduit l'application Angular fournie dans `TESTP2CODEX`, mais avec une pile 100 % JavaScript/Node.js et une structure volontairement difficile à maintenir. L'objectif pédagogique est identique : analyser le code, identifier les problèmes techniques et structurels, puis repenser une architecture front soigneuse.
+Ce projet est la déclinaison JavaScript/Node.js du starter Angular fourni dans le dépôt `TESTP2CODEX`. Il a été volontairement laissé dans un état peu maintenable pour vous permettre d’analyser l’architecture existante, d’identifier les mauvaises pratiques et de proposer un refactoring complet.
 
-## Démarrage rapide
+## Installation
 
 ```bash
 npm install
+```
+
+## Serveur de développement
+
+```bash
 npm start
 ```
 
-L'application écoute sur [http://localhost:3000](http://localhost:3000). Le serveur Express expose les fichiers statiques depuis `public/` et l'API `GET /api/olympic` qui lit directement `public/assets/mock/olympic.json` à chaque requête.
+Le serveur Express démarre sur [http://localhost:3000](http://localhost:3000). Il expose :
 
-## Points d'attention (volontairement "mauvais")
+- les fichiers statiques contenus dans `public/` ;
+- l’API `GET /api/olympic` qui renvoie le contenu de `public/assets/mock/olympic.json`.
 
-- Toute la logique front est regroupée dans `public/app.js` avec des variables globales et des fonctions volumineuses.
-- Les composants de page (`index.html`, `country.html`) dupliquent le markup et s'appuient sur des sélecteurs `id` fragiles.
-- Le backend relit le JSON de manière synchrone et expose `node_modules/` pour alimenter Chart.js côté client.
-- Aucun typage, aucune séparation front/back, aucune stratégie d'erreur ou de tests : c'est à l'étudiant de remettre de l'ordre.
+L’application est fournie telle quelle : chaque modification des fichiers JavaScript ou HTML nécessite un rafraîchissement manuel dans le navigateur.
 
-Bon courage pour le refactoring !
+## Où commencer ?
+
+Comme pour la version Angular, une structure existe déjà même si elle n’est pas idéale. Prenez le temps d’explorer les fichiers suivants :
+
+- `public/app.js` (tout le code front-y est regroupé) ;
+- `server.js` (lecture synchrone du JSON, exposition de `node_modules/`) ;
+- `public/index.html` et `public/country.html` (duplication et accès DOM via des `id`).
+
+L’objectif du projet est de :
+
+1. Cartographier les mauvaises pratiques (architecture, logique, dette technique) et les noter dans `notes-architecture.md`.
+2. Proposer une organisation plus claire (modules, services, composants, gestion des données).
+3. Refactoriser progressivement le code pour appliquer votre architecture cible.
+4. Centraliser les accès aux données (fichier JSON aujourd’hui, API demain).
+5. Documenter votre nouvelle structure dans `ARCHITECTURE.md`.
+
+Vous êtes libres d’adapter l’arborescence : créez un dossier `src/` si besoin, introduisez des modules ES, extrayez des composants, etc. Gardez simplement à l’esprit la finalité pédagogique : rendre le code lisible, testable et évolutif.
+
+Bonne analyse et bon refactoring !
